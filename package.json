@@ -1,0 +1,90 @@
+{
+  "name": "react-horizontal-scroll-menu",
+  "version": "0.0.2",
+  "description": "Horizontal menu component for React, support scroll, mouse and touch devices.",
+  "main": "build/index.js",
+  "browser": "build/index.js",
+  "esnext": "build/index.mjs.js",
+  "jsnext:main": "build/index.mjs.js",
+  "typings": "build/index.d.ts",
+  "scripts": {
+    "start": "webpack --env.development --mode development --watch",
+    "build": "webpack --env.production --mode production && webpack --config webpack-esnext.config.js --env.production --mode production",
+    "postbuild": "npm run docs",
+    "test": "jest --coverage --runInBand --ci --cache=false",
+    "coverage": "jest --coverage --cache=false --runInBand --ci --coverageReporters=text-lcov | coveralls",
+    "test:watch": "jest --watch",
+    "coveralls": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=text-lcov",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "deploy": "babel-node scripts/deploy.js",
+    "docs": "typedoc --out docs src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kucukharf/react-horizontal-scroll-menu.git"
+  },
+  "keywords": [
+    "react",
+    "menu",
+    "horizontal",
+    "scroll",
+    "scrolling-menu"
+  ],
+  "author": "burakarslan17@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kucukharf/react-horizontal-scroll-menu/issues"
+  },
+  "homepage": "https://github.com/kucukharf/react-horizontal-scroll-menu#readme",
+  "peerDependencies": {
+    "react": "^15.x || ^16.x",
+    "react-dom": "^15.x || ^16.x"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/runtime": "^7.3.4",
+    "@types/enzyme": "^3.9.0",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.4",
+    "@types/react": "^16.8.5",
+    "@types/react-dom": "^16.8.2",
+    "all-contributors-cli": "^5.3.0",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "coveralls": "^3.0.2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "eslint": "^5.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^24.1.0",
+    "jscoverage": "^0.6.0",
+    "jsdom": "^11.11.0",
+    "nodeunit": "^0.11.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "ts-jest": "^24.0.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.16.0",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.5.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "files": [
+    "build"
+  ]
+}
